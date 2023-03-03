@@ -1,0 +1,62 @@
+#characters {
+  padding: 60px 0;
+}
+
+.characterCardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 18px;
+}
+
+.characterCard {
+  display: flex;
+  overflow: hidden;
+  background: rgb(60, 62, 68);
+  border-radius: 0.5rem;
+  height: 200px;
+
+  .characterInfo {
+    padding: 18px;
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+
+      &_icon {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #9e9e9e;
+        margin-right: 5px;
+
+        &.alive {
+          background-color: #55cc44;
+        }
+
+        &.dead {
+          background-color: #d63d2e;
+        }
+      }
+
+      p {
+        text-transform: capitalize;
+      }
+    }
+
+    .infoSection {
+      margin: 5px 0;
+
+      .label {
+        color: #9e9e9e;
+      }
+    }
+  }
+
+
+}
+
