@@ -1,6 +1,6 @@
 
 import React from "react";
-import Header from "@components/layout/Header/Header";
+import Header from "@components/../src/widgets/Header/Header";
 import { Roboto} from '@next/font/google'
 import '../styles/globals.css'
 

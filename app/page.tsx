@@ -1,6 +1,5 @@
-import PageHead from "@components/layout/PageHead/PageHead";
-import CharacterCard from "@components/CharacterCards/CharacterCard";
-import CharacterCards from "@components/CharacterCards/CharacterCards";
+import PageHead from "@widgets/PageHead/PageHead";
+import CharactersSection from "@widgets/CharactersSection/CharactersSection";
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -10,8 +9,7 @@ export default async function Page() {
   return (
     <div>
       <PageHead pageName={"The Rick And Morty"} description={""} />
-          {/* @ts-expect-error Server Component */}
-          <CharacterCards />
+          <CharactersSection />
     </div>
   );
 }

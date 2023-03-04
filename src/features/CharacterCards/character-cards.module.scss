@@ -1,0 +1,10 @@
+#characters {
+  padding: 60px 0;
+}
+
+.characterCardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 18px;
+}
+

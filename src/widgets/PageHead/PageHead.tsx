@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './pagehead.module.scss'
-import Typography from "@components/Typography/Typography";
+import Typography from "@shared/Typography/Typography";
 
 interface PageHeadProps {
    pageName: string

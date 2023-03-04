@@ -1,5 +1,5 @@
-import LoadingSpinner from "@components/UI/LoadingSpinner";
+import LoadingFull from "@features/LoadingFull/LoadingFull";
 
 export default async function Loading() {
-  return <LoadingSpinner type='screen' />;
+  return <LoadingFull />;
 }
