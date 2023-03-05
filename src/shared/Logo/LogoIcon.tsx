@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Logo = (props: React.ComponentPropsWithRef<'svg'>) => {
+const LogoIcon = (props: React.ComponentPropsWithRef<'svg'>) => {
    return (
       <svg {...props} className="fill-black" width="40" height="40" viewBox="0 0 50 50">
          <path
@@ -9,4 +9,4 @@ const Logo = (props: React.ComponentPropsWithRef<'svg'>) => {
    );
 };
 
-export default Logo;
+export default LogoIcon;

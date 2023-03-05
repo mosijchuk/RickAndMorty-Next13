@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import {ROUTES} from "@utils/constants";
-import Logo from "@shared/icons/Logo";
+import Logo from "@shared/Logo/Logo";
 
 const Header = () => {
    return (

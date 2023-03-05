@@ -1,0 +1,14 @@
+.logo {
+  display: flex;
+  align-items: center;
+  transition: opacity .3s;
+
+  span {
+    font-weight: 900;
+    margin-left: 5px;
+  }
+
+  &:hover {
+    opacity: .9;
+  }
+}

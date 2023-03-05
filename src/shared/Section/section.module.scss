@@ -3,6 +3,22 @@
   padding: 60px 0;
 }
 
+.sectionHeader {
+  margin-bottom: 50px;
+
+  p {
+    opacity: .6;
+  }
+}
+
+.light {
+  background-color: #fff;
+}
+
+.dark {
+  background-color: #222222;
+}
+
 @media(max-width: 767px) {
   .section {
     padding: 36px 0;

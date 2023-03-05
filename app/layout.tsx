@@ -1,8 +1,8 @@
 
 import React from "react";
-import Header from "@components/../src/widgets/Header/Header";
 import { Roboto} from '@next/font/google'
 import '../styles/globals.css'
+import Header from "@widgets/Header/Header";
 
 interface RootLayoutProps {
     children: React.ReactNode
@@ -17,7 +17,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({children}) => {
   return (
     <html lang="en">
       <head>
-          <title>Rick And Morty</title>
+          <title>The Rick And Morty</title>
       </head>
       <body className={roboto.className}>
       <Header />
