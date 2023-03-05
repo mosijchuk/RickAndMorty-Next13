@@ -1,5 +1,5 @@
 import PageHead from "@widgets/PageHead/PageHead";
-import CharactersBlock from "@widgets/CharactersBlock/CharactersBlock";
+import RandomCharactersSection from "@widgets/RandomCharactersSection/RandomCharactersSection";
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -9,7 +9,7 @@ export default async function Page() {
   return (
     <div>
       <PageHead pageName={"The Rick And Morty"} description={""} />
-          <CharactersBlock />
+          <RandomCharactersSection />
     </div>
   );
 }

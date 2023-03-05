@@ -17,7 +17,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({children}) => {
   return (
     <html lang="en">
       <head>
-          <title>The Rick And Morty</title>
+          <title>The Rick And Morty App</title>
       </head>
       <body className={roboto.className}>
       <Header />
