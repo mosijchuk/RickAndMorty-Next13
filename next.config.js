@@ -6,6 +6,16 @@ const nextConfig = {
       { loader: '@next/font/google', options: { subsets: ['latin'] } },
     ],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'rickandmortyapi.com',
+        port: '',
+        pathname: '/api/character/avatar/**',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig

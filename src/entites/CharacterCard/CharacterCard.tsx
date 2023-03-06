@@ -2,6 +2,8 @@ import React from "react";
 import s from "./character-card.module.scss";
 import {CharacterType} from "../../types/character.types";
 import Link from "next/link";
+import Image from 'next/image';
+import {ROUTES} from "@utils/constants";
 
 interface Props {
    character: CharacterType;
@@ -10,9 +12,14 @@ interface Props {
 const CharacterCard: React.FC<Props> = ({character}: Props) => {
    return (
       <div className={s.characterCard}>
-         <img src={character.image} alt={character.name}/>
+         <Image
+            src={character.image}
+            alt={character.name}
+            width={200}
+            height={200}
+         />
          <div className={s.characterInfo}>
-            <Link href={`/character/${character.id}`}>
+            <Link href={`${ROUTES.CHARACTER}/${character.id}`}>
                <h2>{character.name}</h2>
             </Link>
 

@@ -4,12 +4,12 @@ import RandomCharactersSection from "@widgets/RandomCharactersSection/RandomChar
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function Page() {
-  const test = await wait(1000);
+   const test = await wait(1000);
 
-  return (
-    <div>
-      <PageHead pageName={"The Rick And Morty"} description={""} />
-          <RandomCharactersSection />
-    </div>
-  );
+   return (
+      <div>
+         <PageHead pageName={"The Rick And Morty"} description={""}/>
+         <RandomCharactersSection/>
+      </div>
+   );
 }
