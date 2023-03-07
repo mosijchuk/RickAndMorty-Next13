@@ -1,5 +1,15 @@
 .center {
   display: flex;
   justify-content: center;
+}
+
+.mt {
   margin-top: 50px;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  justify-items: center;
 }

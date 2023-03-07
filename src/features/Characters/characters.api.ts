@@ -18,3 +18,8 @@ export async function getRandomCharacters(count: number = 9): Promise<Array<Char
    const res = await fetch(`https://rickandmortyapi.com/api/character/${randomIds.join()}`);
    return res.json();
 }
+
+export async function getCharacter(id: string): Promise<CharacterType> {
+   const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+   return res.json();
+}

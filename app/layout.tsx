@@ -1,30 +1,27 @@
-
 import React from "react";
-import { Roboto} from '@next/font/google'
+import {Roboto} from '@next/font/google'
 import '../styles/globals.css'
-import Header from "@widgets/Header/Header";
 
 interface RootLayoutProps {
-    children: React.ReactNode
+   children: React.ReactNode
 }
 
 const roboto = Roboto({
-   weight : ['400', '500', '900'],
+   weight: ['400', '500', '900'],
    preload: true
 })
 
 const RootLayout: React.FC<RootLayoutProps> = ({children}) => {
-  return (
-    <html lang="en">
+   return (
+      <html lang="en">
       <head>
-          <title>The Rick And Morty App</title>
+         <title>The Rick And Morty App</title>
       </head>
       <body className={roboto.className}>
-      <Header />
       {children}
       </body>
-    </html>
-  )
+      </html>
+   )
 }
 
 export default RootLayout

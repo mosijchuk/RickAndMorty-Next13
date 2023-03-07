@@ -9,9 +9,10 @@ import CenterInfo from '@entites/CenterInfo/CenterInfo';
 import Button from '@shared/Button/Button';
 
 interface Props {
-   pageId: string
+   pageId: string,
+   charactersRes: CharactersResponseType
 }
-const CharacterCardsAll =  ({pageId}: Props) => {
+const CharacterCardsAll =  ({pageId, charactersRes}: Props) => {
    const [characters, setCharacters] = useState<CharacterType[]>([]);
    const [isFetching, setFetching] = useState<boolean>(false)
    const [pagesCount, setPagesCount] = useState<number>(0)
@@ -19,13 +20,10 @@ const CharacterCardsAll =  ({pageId}: Props) => {
 
 
    useEffect(() => {
-      async function fetchData() {
-         const res: CharactersResponseType = await getCharacters(pageNumber);
-         setCharacters(res.results);
-         setPagesCount(res.info.pages)
+      if(charactersRes) {
+         setCharacters(charactersRes.results);
+         setPagesCount(charactersRes.info.pages)
       }
-
-      fetchData();
    }, []);
 
    const loadMoreHandler = async () => {

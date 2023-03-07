@@ -11,33 +11,32 @@ interface Props {
 
 const CharacterCard: React.FC<Props> = ({character}: Props) => {
    return (
-      <div className={s.characterCard}>
-         <Image
-            src={character.image}
-            alt={character.name}
-            width={200}
-            height={200}
-         />
-         <div className={s.characterInfo}>
-            <Link href={`${ROUTES.CHARACTER}/${character.id}`}>
+      <Link href={`${ROUTES.CHARACTER}/${character.id}`}>
+         <div className={s.characterCard}>
+            <Image
+               src={character.image}
+               alt={character.name}
+               width={200}
+               height={200}
+            />
+            <div className={s.characterInfo}>
                <h2>{character.name}</h2>
-            </Link>
-
-            <span className={s.status}>
+               <span className={s.status}>
           <span className={`${s.status_icon} ${s[character.status.toLowerCase()]}`}></span>
           <p>{character.status}</p>
        </span>
 
-            <div className={s.infoSection}>
-               <p className={s.label}>Species:</p>
-               <p>{character.species}</p>
-            </div>
-            <div className={s.infoSection}>
-               <p className={s.label}>Gender:</p>
-               <p>{character.gender}</p>
+               <div className={s.infoSection}>
+                  <p className={s.label}>Species:</p>
+                  <p>{character.species}</p>
+               </div>
+               <div className={s.infoSection}>
+                  <p className={s.label}>Gender:</p>
+                  <p>{character.gender}</p>
+               </div>
             </div>
          </div>
-      </div>
+      </Link>
    );
 };
 

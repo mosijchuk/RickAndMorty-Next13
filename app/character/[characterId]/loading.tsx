@@ -1,10 +1,5 @@
- const LoadingCharacterPage =  () => {
+import LoadingFull from "@features/LoadingFull/LoadingFull";
 
-   return (
-      <section>
-         <h1 className="font-bold underline">is loading...</h1>
-      </section>
-   );
-};
-
-export default LoadingCharacterPage;
+export default async function Loading() {
+  return <LoadingFull />;
+}

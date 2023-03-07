@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './typography.module.scss'
 
-type Tag = 'div' | 'span' | 'h1' | 'h2' | 'p'
+type Tag = 'div' | 'span' | 'h1' | 'h2' | 'p' | 'small'
 type Variant = 'title-1' | 'title-2' | 'body-1' | 'body-2' | 'label-1'
 type Color = 'light' | 'dark'
 

@@ -1,11 +1,12 @@
+'use client'
 import React from 'react';
 import s from './button.module.scss'
 
 interface ButtonProps {
    text: string
-   callback: ()=>void
+   callback?: ()=>void
 }
-const Button:React.FC<ButtonProps> = ({text, callback}) => {
+const Button:React.FC<ButtonProps> = ({text, callback= ()=>{}}) => {
    return <button className={s.btn} onClick={()=>{callback()}}>{text}</button>
 }
 

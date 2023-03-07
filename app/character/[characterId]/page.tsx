@@ -1,10 +1,10 @@
 import React from 'react';
+import PageHead from "@widgets/PageHead/PageHead";
+import RandomCharactersSection from "@widgets/RandomCharactersSection/RandomCharactersSection";
+import {getCharacter} from "@features/Characters/characters.api";
+import Header from "@widgets/Header/Header";
+import Footer from "@widgets/Footer/Footer";
 
-
-async function getCharacter(id: string) {
-   const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
-   return res.json();
-}
 
 interface Props {
    params: {
@@ -12,16 +12,32 @@ interface Props {
    }
 }
 
- const CharacterPage = async ({ params }:Props) => {
-    const { characterId } = params;
+const CharacterPage = async ({params}: Props) => {
+   const {characterId} = params;
+   const {
+      name,
+      species,
+      gender,
+      status,
+      origin: {name: originName},
+      image
+   } = await getCharacter(characterId);
+   const description =
+      `${species}, ${gender} / ${status} / ${originName}`
+   const randomItemsCount = 6
 
-    console.log(params)
-   const character = await getCharacter(characterId);
    return (
-      <section>
-         <h1 className="font-bold underline">{character.name}</h1>
-      </section>
-   );
+      <>
+         <Header />
+         <PageHead pageName={name} description={description} imageLink={image}/>
+         <RandomCharactersSection
+            itemsCount={randomItemsCount}
+            name={`Other characters`}
+         />
+         <Footer />
+      </>
+   )
+      ;
 };
 
 export default CharacterPage;
