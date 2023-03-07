@@ -2,11 +2,13 @@ import React from 'react';
 import Link from "next/link";
 import {ROUTES} from "@utils/constants";
 import Logo from "@shared/Logo/Logo";
+import s from './header.module.scss'
+import g from '@styles/global.module.scss'
 
 const Header = () => {
    return (
-      <header className="bg-slate-200 w-full">
-         <div className="container flex justify-between py-4 items-center text-slate-700">
+      <header className={s.header}>
+         <div className={`${g.container} ${s.headerWrapper}`}>
             <Logo/>
             <nav>
                <ul>

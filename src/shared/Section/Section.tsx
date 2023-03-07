@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './section.module.scss'
 import Typography from "@shared/Typography/Typography";
+import g from '@styles/global.module.scss'
 
 interface SectionProps {
    header?: {
@@ -15,7 +16,7 @@ const Section:React.FC<SectionProps> = ({header, bg = 'dark', children}) => {
    const textColor = bg === 'dark' ? 'light' : 'dark'
    return (
       <section className={`${s.section} ${s[bg]}`}>
-         <div className="container">
+         <div className={g.container}>
             {header && (
                <div className={s.sectionHeader}>
                   {header.name && (

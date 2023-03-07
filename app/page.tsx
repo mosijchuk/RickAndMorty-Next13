@@ -6,7 +6,6 @@ import Footer from "@widgets/Footer/Footer";
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function Page() {
-   const test = await wait(1000);
    const itemsCount = 9
    return (
       <>

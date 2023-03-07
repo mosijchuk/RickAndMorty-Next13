@@ -8,3 +8,15 @@
   grid-gap: 18px;
 }
 
+@media screen and (max-width: 1200px) {
+  .characterCardsWrapper {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .characterCardsWrapper {
+    grid-template-columns: repeat(1, 1fr)
+  }
+}

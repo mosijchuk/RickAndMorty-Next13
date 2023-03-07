@@ -20,8 +20,12 @@
   background-color: #222222;
 }
 
-@media(max-width: 767px) {
+@media screen and (max-width: 767px) {
   .section {
-    padding: 36px 0;
+    padding: 42px 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 26px;
   }
 }
