@@ -3,9 +3,11 @@ import RandomCharactersSection from "@widgets/RandomCharactersSection/RandomChar
 import Header from "@widgets/Header/Header";
 import Footer from "@widgets/Footer/Footer";
 
-const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+ const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function Page() {
+   const loading = await wait(1000)
+
    const itemsCount = 9
    return (
       <>
